@@ -1,39 +1,81 @@
-const header = document.getElementById('siteHeader');
-        window.addEventListener('scroll', () =>
-    {
-        header:classList.toggle('scrolled', window.scrollY > 10);
+const header = document.getElementById("siteHeader");
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+const navLinks = document.querySelectorAll(".nav-link");
+
+function updateHeader(){
+    header.classList.toggle("scrolled", window.scrollY > 20);
+}
+
+function closeMenu(){
+    mainNav.classList.remove("open");
+    menuToggle.setAttribute("aria-label", "Open navigation");
+}
+
+function toggleMenu(){
+    const isOpen = mainNav.classList.toggle("open");
+
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+    );
+}
+
+window.addEventListener("scroll", updateHeader);
+
+menuToggle.addEventListener("click", toggleMenu);
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.forEach(item => item.classList.remove("active"));
+        link.classList.add("active");
+        closeMenu();
     });
+});
 
-    const navLinks = document.querySelectorAll('nav ul li a');
-    const toggle = document.querySelector('.menu-toggle');
-    const navEL = document.querySelector('nav');
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", event => {
+        const target = document.querySelector(link.getAttribute("href"));
 
-    toggle.addEventListener('click', () =>
-{
-    const open =
-    navEL.style.display === 'block';
-    navEL.style.display = open ?
-    'none':'block';
-    if(!open){
-        navEL.style.position='absolute';
-        navEL.style.top='64px';
-        navEL.style.left='0'
-        navEL.style.right='0'
-        navEL.style.background='#fff';
-        navEL.style.padding='16px 32px';
-        navEL.style.boxShadow='0 12px 24px rgba(110,13,26,0.12)';
-        navEL.querySelector('ul').style.flexDirection='column';
-        navEL.querySelector('ul').style.alignItems='flex-start';
-        navEL.querySelector('ul').style.gap='4px';
+        if(target){
+            event.preventDefault();
+            target.scrollIntoView({
+                behavior:"smooth",
+                block:"start"
+            });
+        }
+    });
+});
 
+const sections = document.querySelectorAll("section[id]");
+
+const sectionObserver = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                const currentId = entry.target.id;
+
+                navLinks.forEach(link => {
+                    link.classList.toggle(
+                        "active",
+                        link.getAttribute("href") === `#${currentId}`
+                    );
+                });
+            }
+        });
+    },
+    {
+        threshold:0.35
+    }
+);
+
+sections.forEach(section => sectionObserver.observe(section));
+
+window.addEventListener("resize", () => {
+    if(window.innerWidth > 1000){
+        closeMenu();
     }
 });
 
-navLinks.forEach(link=>{
-    link.addEventListener('click', ()=>{
-        navLinks.forEach(I=>I.classList.remove('active'));
-        link.classList.add('active');
-        if(window.innerWidth<=900)
-    { navEL.style.display='none';}
-    });
-});
+updateHeader();
+

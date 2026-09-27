@@ -3,196 +3,364 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="BeTechified Series - A beginner-friendly path into web development.">
+    <title>BeTechified Series | Learn Web Development</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header id="siteHeader">
-        <div class="nav-wrap">
-            <a href="#" class="logo">
-                <div class="logo-badge">BT</div>
-                <div class="logo-text">BeTechified<span>Series</span></div>
+
+    <header class="site-header" id="siteHeader">
+        <div class="nav-container">
+            <a href="#home" class="brand">
+                <span class="brand-mark">BT</span>
+                <span class="brand-name">
+                    BeTechified
+                    <small>Series</small>
+                </span>
             </a>
-            <nav>
-                <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#why">Why us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+
+            <nav class="main-nav" id="mainNav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#courses" class="nav-link">Courses</a>
+                <a href="#why" class="nav-link">Why Us</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </nav>
-            <div class="nav-cta">
-                <a href="#courses" class="btn-primary">Start Learning</a>
-            </div>
-            <button class="menu-toggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+
+            <a href="#courses" class="nav-button">Start Learning</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <section class="hero" id="home">
-        <div class="container hero-grid">
-            <div>
-                <div class="eyebrow"><span class="dot"></span>Beginner Web Development, Simplified</div>
-                <h1 class="hero-title">Learn to build the web, <em>one step at a time</em>.</h1>
-                <p class="hero-sub">BeTechified Series turns HTML, CSS, Javascript, and the tools around them into a clear, guided path - built for people starting from zero and ending with real, working code.</p>
-                <div class="hero-actions">
-                    <a href="#courses" class="btn-primary">Explore the Curriculum</a>
-                    <a href="#why" class="btn-ghost">See How It Works</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat"><b>5</b><span>Core Modules</span></div>
-                    <div class="stat"><b>100%</b><span>Beginner Friendly</span></div>
-                    <div class="stat"><b>1:1</b><span>Guided Format</span></div>
-                </div>
-            </div>
-            <div class="path-card">
-                <h4>Curriculum Path</h4>
-                <div class="path-line">
-                    <div class="path-step done">
-                        <div class="ps-label">Step 01</div>
-                        <div class="ps-title">HTML Foundations</div>
-                        <div class="ps-desc">Structure, boilerplate, and essential tags.</div>
-                    </div>
-                    <div class="path-step done">
-                        <div class="ps-label">Step 02</div>
-                        <div class="ps-title">CSS Basics</div>
-                        <div class="ps-desc">Styling, layout, and visual thinking.</div>
-                    </div>
-                    <div class="path-step">
-                        <div class="ps-label">Step 03</div>
-                        <div class="ps-title">Javascript Fundamentals</div>
-                        <div class="ps-desc">Logic, interactivity, and behaviour.</div>
-                    </div>
-                    <div class="path-step">
-                        <div class="ps-label">Step 04</div>
-                        <div class="ps-title">The DOM</div>
-                        <div class="ps-desc">Connecting code to the page.</div>
-                    </div>
-                    <div class="path-step">
-                        <div class="ps-label">Step 05</div>
-                        <div class="ps-title">Working with APIs</div>
-                        <div class="ps-desc">Bringing live data into your projects.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
 
-    <section id="courses">
-        <div class="container">
-            <div class="section-head">
-                <div class="eyebrow"><span class="dot"></span>The Series</div>
-                <h2>Five Modules. One clear path.</h2>
-                <p>Every course builds on the last, so you always know exactly what comes next and why it matters.</p>
-            </div>
-            <div class="courses-grid">
-                <div class="course-card">
-                    <div class="course-icon"><svg viewbox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3I1.5 17L12 22I6.5-2L20 3H4z"/><path d="M8 8h8M8 12h7M9 16h5"/></svg></div>
-                    <span class="course-tag">Step 01</span>
-                    <h3>HTML Foundations</h3>
-                    <p>Learn the building blocks of every web page - tags, structure, and semantic markup.</p>
-                </div>
-                <div class="course-card">
-                    <div class="course-icon"><svg viewbox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3h16I-1.5 17L12 22I-6.5-2L4 3z"/><path d="M8 8h8M8.5 12h6M9 16h4"/></svg></div>
-                    <span class="course-tag">Step 02</span>
-                    <h3>CSS Basics</h3>
-                    <p>Turn plain structure into real design with color, layout, and spacing systems.</p>
-                </div>
-                <div class="course-card">
-                    <div class="course-icon"><svg viewbox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v18M6 3I12 9-12 9"/></svg></div>
-                    <span class="course-tag">Step 03</span>
-                    <h3>Javascript Fundamentals</h3>
-                    <p>Add logic and interactivity - variables, functions, and control of flow explained simply.</p>
-                </div>
-                <div class="course-card">
-                    <div class="course-icon"><svg viewbox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/></svg></div>
-                    <span class="course-tag">Step 04 + 05</span>
-                    <h3>DOM &amp; APIs</h3>
-                    <p>Connect your code to the page and to live data, and ship your first real projects.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="hero" id="home">
+            <div class="hero-background"></div>
 
-    <section class="why" id="why">
-        <div class="container">
-            <div class="section-head">
-                <div class="eyebrow"><span class="dot"></span>Why BeTechified</div>
-                <h2>Built for the way beginners actually learn.</h2>
-                <p>No jargon, no assumptions - just a clear, structured way in.</p>
-            </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="num">01</div>
-                    <h3>Plain-language teaching</h3>
-                    <p>Every concept is explained with analogies and comprehension checks before moving forward - no prior experience assumed.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="num">02</div>
-                    <h3>Structured, sequential path</h3>
-                    <p>Modules are ordered deliberately, so each new topic builds directly on what you already know.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="num">03</div>
-                    <h3>Hands-on from day one</h3>
-                    <p>Live code editors, quizzes, and real assignments turn every lesson into practiced skill, not passive reading.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="eyebrow">
+                        <span></span>
+                        Beginner-friendly web development
+                    </div>
 
-    <section class="cta-section" id="contact">
-        <div class="container">
-            <h2>Ready to get BeTechified?</h2>
-            <p>Join the series and start building with confidence, one step at a time.</p>
-            <div class="cta-actions">
-                <a href="#courses" class="btn-primary">Start Learning Today</a>
-                <a href="#" class="btn-ghost">Talk to the Team</a>
-            </div>
-        </div>
-    </section>
+                    <h1>
+                        Turn your ideas
+                        <strong>into the web.</strong>
+                    </h1>
 
-    <footer>
+                    <p class="hero-description">
+                        Learn HTML, CSS, JavaScript, DOM manipulation and APIs through a simple, structured path designed to help beginners build real projects.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#courses" class="primary-button">
+                            Explore Courses
+                            <span>→</span>
+                        </a>
+
+                        <a href="#why" class="secondary-button">
+                            Why BeTechified?
+                        </a>
+                    </div>
+
+                    <div class="hero-numbers">
+                        <div>
+                            <strong>05</strong>
+                            <span>Learning Steps</span>
+                        </div>
+
+                        <div>
+                            <strong>100%</strong>
+                            <span>Beginner Friendly</span>
+                        </div>
+
+                        <div>
+                            <strong>01</strong>
+                            <span>Clear Learning Path</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="learning-card">
+                    <div class="card-heading">
+                        <div>
+                            <span>YOUR JOURNEY</span>
+                            <h3>Learning Roadmap</h3>
+                        </div>
+                        <div class="progress">40%</div>
+                    </div>
+
+                    <div class="roadmap">
+
+                        <div class="roadmap-item completed">
+                            <div class="roadmap-number">01</div>
+                            <div>
+                                <small>FOUNDATION</small>
+                                <h4>HTML</h4>
+                                <p>Build the structure of the web.</p>
+                            </div>
+                        </div>
+
+                        <div class="roadmap-item completed">
+                            <div class="roadmap-number">02</div>
+                            <div>
+                                <small>DESIGN</small>
+                                <h4>CSS</h4>
+                                <p>Create layouts and visual experiences.</p>
+                            </div>
+                        </div>
+
+                        <div class="roadmap-item">
+                            <div class="roadmap-number">03</div>
+                            <div>
+                                <small>LOGIC</small>
+                                <h4>JavaScript</h4>
+                                <p>Make your websites interactive.</p>
+                            </div>
+                        </div>
+
+                        <div class="roadmap-item">
+                            <div class="roadmap-number">04</div>
+                            <div>
+                                <small>INTERACTION</small>
+                                <h4>DOM</h4>
+                                <p>Connect JavaScript to your webpage.</p>
+                            </div>
+                        </div>
+
+                        <div class="roadmap-item">
+                            <div class="roadmap-number">05</div>
+                            <div>
+                                <small>DATA</small>
+                                <h4>APIs</h4>
+                                <p>Work with information from the web.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="courses section" id="courses">
+            <div class="container">
+
+                <div class="section-intro">
+                    <div>
+                        <span class="section-label">THE CURRICULUM</span>
+                        <h2>Everything starts<br>with the basics.</h2>
+                    </div>
+
+                    <p>
+                        Follow a progressive learning path where every new concept connects to something you've already learned.
+                    </p>
+                </div>
+
+                <div class="courses-grid">
+
+                    <article class="course-card">
+                        <div class="course-top">
+                            <span class="course-number">01</span>
+                            <span class="course-icon">&lt;/&gt;</span>
+                        </div>
+
+                        <h3>HTML Foundations</h3>
+
+                        <p>
+                            Understand document structure, semantic elements, forms, links, images and the essential building blocks of webpages.
+                        </p>
+
+                        <span class="course-status">START HERE</span>
+                    </article>
+
+                    <article class="course-card featured">
+                        <div class="course-top">
+                            <span class="course-number">02</span>
+                            <span class="course-icon">{ }</span>
+                        </div>
+
+                        <h3>CSS Basics</h3>
+
+                        <p>
+                            Learn styling, colors, spacing, Flexbox, Grid, responsive layouts and the principles behind good visual design.
+                        </p>
+
+                        <span class="course-status">BUILD</span>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-top">
+                            <span class="course-number">03</span>
+                            <span class="course-icon">JS</span>
+                        </div>
+
+                        <h3>JavaScript</h3>
+
+                        <p>
+                            Learn variables, functions, conditions, events and the programming logic needed to make websites interactive.
+                        </p>
+
+                        <span class="course-status">CREATE</span>
+                    </article>
+
+                    <article class="course-card">
+                        <div class="course-top">
+                            <span class="course-number">04</span>
+                            <span class="course-icon">DOM</span>
+                        </div>
+
+                        <h3>DOM &amp; APIs</h3>
+
+                        <p>
+                            Manipulate webpage elements, respond to user actions and retrieve useful information from external APIs.
+                        </p>
+
+                        <span class="course-status">ADVANCE</span>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="why-section section" id="why">
+            <div class="container">
+
+                <div class="why-heading">
+                    <span class="section-label light">WHY BETECHIFIED</span>
+                    <h2>Learn without feeling<br>lost along the way.</h2>
+                    <p>
+                        A structured approach makes technical concepts easier to understand, practise and remember.
+                    </p>
+                </div>
+
+                <div class="features">
+
+                    <article class="feature">
+                        <span class="feature-number">01</span>
+                        <div class="feature-icon">◈</div>
+                        <h3>Simple explanations</h3>
+                        <p>
+                            Complex concepts are broken into understandable ideas before you move to the next stage.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <span class="feature-number">02</span>
+                        <div class="feature-icon">↗</div>
+                        <h3>Learn by building</h3>
+                        <p>
+                            Turn lessons into practical experience by writing code and working on real projects.
+                        </p>
+                    </article>
+
+                    <article class="feature">
+                        <span class="feature-number">03</span>
+                        <div class="feature-icon">✓</div>
+                        <h3>Progress with purpose</h3>
+                        <p>
+                            Each stage prepares you for the next, giving your learning journey a clear direction.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section section" id="contact">
+            <div class="container">
+
+                <div class="contact-box">
+                    <div class="contact-content">
+                        <span class="section-label">READY TO START?</span>
+
+                        <h2>Your first line of code could be the beginning of something bigger.</h2>
+
+                        <p>
+                            Start learning the fundamentals, build your confidence and take the next step in your web development journey.
+                        </p>
+
+                        <div class="contact-buttons">
+                            <a href="#courses" class="primary-button">
+                                Start Learning
+                                <span>→</span>
+                            </a>
+
+                            <a href="#home" class="secondary-button">
+                                Back to Home
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-decoration">
+                        <div class="circle circle-one"></div>
+                        <div class="circle circle-two"></div>
+                        <span>&lt;/&gt;</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
+
+            <div class="footer-main">
+
                 <div class="footer-brand">
-                    <div class="logo">
-                        <div class="logo-badge">BT</div>
-                        <div class="logo-text" style="color: #fff;">BeTechified<span style="color: var(--red-500);">Series</span></div>
-                    </div>
-                    <p>A structured, beginner-first path into web development - from your first tag to your first live API.</p>
+                    <a href="#home" class="brand">
+                        <span class="brand-mark">BT</span>
+                        <span class="brand-name">
+                            BeTechified
+                            <small>Series</small>
+                        </span>
+                    </a>
+
+                    <p>
+                        A structured path into web development for beginners ready to learn, build and grow.
+                    </p>
                 </div>
-                <div>
-                    <h4>Curriculum</h4>
-                    <ul>
-                        <li><a href="#courses">HTML Foundations</a></li>
-                        <li><a href="#courses">CSS Basics</a></li>
-                        <li><a href="#courses">Javascript Fundamentals</a></li>
-                        <li><a href="#courses">DOM &amp; APIs</a></li>
-                    </ul>
+
+                <div class="footer-column">
+                    <h4>Learn</h4>
+                    <a href="#courses">HTML</a>
+                    <a href="#courses">CSS</a>
+                    <a href="#courses">JavaScript</a>
+                    <a href="#courses">DOM &amp; APIs</a>
                 </div>
-                <div>
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#why">Why BeTechified</a></li>
-                        <li><a href="#home">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="#home">Home</a>
+                    <a href="#why">Why Us</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#courses">Courses</a>
                 </div>
-                <div>
+
+                <div class="footer-column">
                     <h4>Get Started</h4>
-                    <ul>
-                        <li><a href="#courses">Start Learning</a></li>
-                        <li><a href="#contact">Talk to the Team</a></li>
-                    </ul>
+                    <a href="#courses">Start Learning</a>
+                    <a href="#contact">Join the Series</a>
                 </div>
+
             </div>
+
             <div class="footer-bottom">
-                <span>© 2026 Betechified Series. All rights reserved.</span>
-                <span>Structured tech education for beginners.</span>
+                <span>© 2026 BeTechified Series.</span>
+                <span>Learn. Build. Grow.</span>
             </div>
+
         </div>
     </footer>
 
     <script src="app.js"></script>
 </body>
 </html>
+
+
